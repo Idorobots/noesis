@@ -3,7 +3,7 @@ Written in Common Lisp and (rarely) other stuff for SKN Noesis Lisp/AI workshops
 Contains:
 
 ** Markov localization
-Implementation an a simple web-app demonstrating [[http://www.google.com/search?btnG=1&pws=0&q=Markov+localization][Markov localization]] algorithms at work.
+Implementation and a simple web-app demonstrating [[http://www.google.com/search?btnG=1&pws=0&q=Markov+localization][Markov localization]] algorithms at work.
 
 Usage:
 
@@ -12,7 +12,7 @@ Usage:
 
 ...and visit [[http://localhost:8080/markov][http://localhost:8080/markov]]
 
-Checkout the `examples' for some input examples.
+Check out the `examples' for some input examples.
 
 ** Particle Filters
 Implementation of a [[http://en.wikipedia.org/wiki/Particle_filter][Particle Filter]] used for localization in a 2D world with several distinctive landmarks.
@@ -20,6 +20,8 @@ Implementation of a [[http://en.wikipedia.org/wiki/Particle_filter][Particle Fil
 Usage:
 
 : CL-USER> (load "particle.lisp")
-: CL-USER> (defparameter robot '(10 10 0))                 ; Robot position and orientation.
-: CL-USER> (defparameter landmarks '((50.0 . 50.0 )...))   ; Used for measurements.
+: CL-USER> (defparameter robot '(10 10 0))                   ; Robot position and orientation.
+: CL-USER> (defparameter landmarks '((50.0 . 50.0 ) ...))    ; Used for measurements.
 : CL-USER> (simulate robot landmarks :N 1000)
+
+Check out `particle.lisp' file for some input examples.
