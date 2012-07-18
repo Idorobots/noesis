@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="prototype.js"></script>
+  <script type="text/javascript" src="particle_filter.js"></script>
+<style type="text/css">
+    a.button:hover 
+    {
+      border: 1px solid #111;
+      color: #000;
+      background-color: #FFF;
+    }
+    
+    a.button 
+    {
+      border: 1px solid #222;
+      border-radius: 3px 3px 3px 3px;
+      background-color: #EEE;
+      padding: 0 3px;
+      margin: 3px;
+      text-decoration: none;
+      color: #222;
+    }
+    
+    a.button.disabled
+    {
+      border: 1px solid #444;
+      background-color: #BBB;
+      color: #444;
+    }
+  </style>
+</head>
+<body onload="map = 'map.png'; filter = new particleFilter(map);" >
+<div style="text-align: center;">
+  <canvas id="pfcanvas"         width="0" height="0"></canvas>
+  <canvas id="particles_canvas" width="0" height="0" style="position: absolute; left: 0; top: 0; z-index: 1;" ></canvas>
+  <canvas id="robot_canvas"     width="0" height="0" style="position: absolute; left: 0; top: 0; z-index: 2;" ></canvas>
+  <canvas id="move_canvas"      width="0" height="0" style="position: absolute; left: 0; top: 0; z-index: 3; opacity:0 " ></canvas>
+  <br />
+  <a class="button" href="#" id="startProbing" onclick="startProbing( filter ); return false;">Add particles</a>
+  <a class="button" href="#" id="stop" onclick="toggleRobotMove( filter.robot ); return false;">Pause</a>
+  <a class="button" href="#" id="moveTrace" onclick="toggleMoveTrace( filter )">Show move trace</a>
+  <br />
+  Moves per sense: </td><td><input type="text" id="steps" value="2"/>
+  <br />
+  Particles: <input type="text" id="numParticles" value="2500"/>
+  <div style="font-size: 50%">Copyright Claude Vervoort 2011</div>
+</div>
+</body>
+</html>

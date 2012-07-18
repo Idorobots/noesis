@@ -1,0 +1,54 @@
+;; Example input for the visualisation
+;; Just paste these into the code field in the browser.
+
+;; 1d:
+
+((green red green green))
+
+((green green green red   green
+  red   green green green green
+  green red   green green green))
+
+;; 2d:
+
+; Simple example:
+((red   red   green)
+ (green green red)
+ (green red   green))
+
+; Too little features:
+((green green green)
+ (green red   green)
+ (green green green))
+
+; Multimodality:
+((green red   red   red   green green green green red   red)
+ (green red   green green green red   green green red   red)
+ (green green green red   green green green green green green)
+ (green green green green green red   green green green green)
+ (red   red   green green green green green green red   green)
+ (green red   green green green red   green green red   green)
+ (green green green red   green red   green green green green)
+ (green green green green green green green green red   green)
+ (red   red   green green green green green red   red   green)
+ (green green green red   green green green green green green))
+
+; Symmetry:
+((green green green red   green)
+ (red   green green green green)
+ (green red   green green green)
+ (green green green red   green)
+ (red   green green green green)
+ (green red   green green green)
+ (green green green red   green)
+ (red   green green green green)
+ (green red   green green green))
+
+; Symmetry pt. 2:
+
+((green green green green red)
+ (green green green red   green)
+ (green green red   green green)
+ (green red   green green green)
+ (red   green green green green))
+
